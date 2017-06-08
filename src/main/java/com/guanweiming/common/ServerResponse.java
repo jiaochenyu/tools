@@ -73,4 +73,12 @@ public class ServerResponse<T> implements Serializable {
         return new ServerResponse<T>(ResponseCode.ERROR.getCode(),msg);
     }
 
+    public static <T> ServerResponse<T> createByNeedLogin(){
+        return new ServerResponse<T>(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
+    }
+
+    public static <T> ServerResponse<T> createByIllegalArgument(){
+        return new ServerResponse<T>(ResponseCode.ILLEGAL_ARGUMENT.getCode(),ResponseCode.ILLEGAL_ARGUMENT.getDesc());
+    }
+
 }
