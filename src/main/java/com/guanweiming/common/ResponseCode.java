@@ -1,8 +1,7 @@
 package com.guanweiming.common;
 
 /**
- * @创建时间 2017/6/7
- * @功能描述
+ * @author zziaguan
  */
 public enum ResponseCode {
     SUCCESS(0, "SUCCESS"),

@@ -7,12 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @作者 Roma
- * @创建时间 2017/3/13
- * @修改时间 2017/3/13
- * @功能描述 可以对键值设置有效期的Map
- * @github https://github.com/zziaguan/
- * @Email zziaguan@163.com
+ * @author zziaguan
  */
 public class ExpiryMap<K, V> extends HashMap<K, V> {
 
@@ -48,10 +43,10 @@ public class ExpiryMap<K, V> extends HashMap<K, V> {
 	}
 
 	/**
-	 * @param key
-	 * @param value
+	 * @param key 键
+	 * @param value 值
 	 * @param expiryTime 键值对有效期 毫秒
-	 * @return
+	 * @return V
 	 */
 	public V put(K key, V value, long expiryTime) {
 		expiryMap.put(key, System.currentTimeMillis() + expiryTime);
@@ -87,7 +82,7 @@ public class ExpiryMap<K, V> extends HashMap<K, V> {
 
 	public Collection<V> values() {
 		Collection<V> values = super.values();
-		if (values == null || values.size() < 1)
+		if (values.size() < 1)
 			return values;
 		Iterator<V> iterator = values.iterator();
 		while (iterator.hasNext()) {
@@ -107,8 +102,7 @@ public class ExpiryMap<K, V> extends HashMap<K, V> {
 	}
 
 	/**
-	 * @Description: 是否过期
-	 * @param key
+	 * @param key 键值
 	 * @return null:不存在或key为null -1:过期 存在且没过期返回value 因为过期的不是实时删除，所以稍微有点作用
 	 */
 	public Object isInvalid(Object key) {
@@ -145,9 +139,8 @@ public class ExpiryMap<K, V> extends HashMap<K, V> {
 
 	/**
 	 *
-	 * @Description: 是否过期
 	 * @param isRemoveSuper true super删除
-	 * @return
+	 * @return 值
 	 */
 	private boolean checkExpiry(Object key, boolean isRemoveSuper) {
 

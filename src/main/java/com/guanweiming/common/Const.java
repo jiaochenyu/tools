@@ -6,8 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @创建时间 2017/6/8
- * @功能描述
+ * @author zziaguan
  */
 public class Const {
     /**
