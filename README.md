@@ -1,3 +1,10 @@
+# 说明
+经常写小程序后台，这里把小程序通用的代码集成到这里。便于统一管理。
+> 环境说明：SpringBoot 1.5.6.RELEASE+jdk1.8
+# 包含组件：
+* 通用的结果返回封装
+* 七牛云生成upToken
+* 跨域Filter
 # 在maven中配置repository
 ```xml
 <!--私有仓库-->
@@ -11,6 +18,6 @@
 <dependency>
     <groupId>com.guanweiming</groupId>
     <artifactId>tools</artifactId>
-    <version>LATEST</version>
+    <version>0.0.1</version>
 </dependency>
 ```
