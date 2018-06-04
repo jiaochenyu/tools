@@ -9,10 +9,10 @@ public class EmailUtil {
 
     /**
      * 处理email
-     * null->null
-     * abcdef@163.com->ab****ef@163.com
+     * null-》null
+     * abcdef@163.com-》ab****ef@163.com
      * 如果@前面的字符串小于等于4位
-     * demo@163.com->d***@163.com
+     * demo@163.com-》d***@163.com
      *
      * @param email 邮箱地址
      * @return 处理完的邮箱

@@ -7,7 +7,7 @@ public class PhoneUtil {
     public static final int PHONE_LENGTH = 11;
 
     /**
-     * 获取安全号码 18888888888-->188****8888
+     * 获取安全号码 18888888888--》188****8888
      * 手机号码必须是11位才能处理，否则返回空
      *
      * @param phone 原始手机号码

@@ -2,7 +2,6 @@ package com.guanweiming.common;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.sun.istack.internal.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -54,7 +53,7 @@ public class JsonUtil {
         }
     }
 
-    public static double getDouble(@NotNull JSONObject jsonObject, @NotNull String name) {
+    public static double getDouble(JSONObject jsonObject, String name) {
         try {
             return jsonObject.getDouble(name);
         } catch (JSONException e) {
@@ -63,7 +62,7 @@ public class JsonUtil {
         }
     }
 
-    public static double getDouble(@NotNull String json, @NotNull String name) {
+    public static double getDouble(String json, String name) {
         try {
             JSONObject jsonObject = new JSONObject(json);
             return jsonObject.getDouble(name);
